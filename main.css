@@ -1,0 +1,51 @@
+* {
+    background-color: #1e2022;
+    color: white
+}
+
+button {
+    background-color: #0f726d;
+    padding: 5px 9px;
+    border: none
+}
+
+button:hover {
+    background-color: #04ccc3;
+}
+
+#nav-logo {
+    max-width: 33%;
+    height: auto;
+}
+
+.offcanvas {
+    background-color: #1e2022;
+}
+.carousel-control-next:hover{
+    background-color: #1e2022;
+}
+
+.carousel-control-prev:hover{
+    background-color: #1e2022;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hyper:link{
+    text-decoration: none;
+}
+
+.card-body{
+    background-color: #1e2022;
+}
+.navbar-toggler-icon{
+    background-color: #04ccc200;
+}
+.light{
+    background-color: #35373a;
+}
