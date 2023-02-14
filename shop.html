@@ -12,12 +12,13 @@
 
 <body>
     <div>
+        <a class ="visually-hidden-focusable" href="#main">Skip to main content</a>
         <div class="row">
             <div class="col-sm">
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <div class="container-fluid">
                         <img id="nav-logo" src="images/Logo.png" alt="Sam's Music Logo">
-                        <button title="Navbar Button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        <button title="Navbar Button" class="navbar-toggler" aria-label = "Open Navbar Button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -44,66 +45,68 @@
                 </nav>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-7 col-11">
-                    <div class="row">
-                        <div class="col-sm-12 col-11 ">Shop</div>
-                        <div class="col-1 d-sm-none">
-                            <button type="button" id="cartButton" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                                Cart
-                            </button>
+        <main id="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-7 col-11">
+                        <div class="row">
+                            <div class="col-sm-12 col-11 ">Shop</div>
+                            <div class="col-1 d-sm-none">
+                                <button type="button" id="cartButton" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                                    Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm col-3 p-0">
+                                <img class="product-img" alt="Album 1 Picture" src="./images/album1.webp">
+                            </div>
+                            <div class="col-sm col-3 p-0 product-name ">Album #1</div>
+                            <div class="col-sm-2 col-2 p-0 product-price ">£15</div>
+                            <div class="col-sm col-4 p-0 ">
+                                <button type='button' id='button1' data-action="add-to-cart"> Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm col-3 p-0">
+                                <img class="product-img" alt="Album 2 Picture" src="./images/album1.webp">
+                            </div>
+                            <div class="col-sm col-3 p-0 product-name">Album #2</div>
+                            <div class="col-sm-2 col-2 p-0 product-price">£15</div>
+                            <div class="col-sm col-4  p-0 ">
+                                <button type='button' id='button2' data-action="add-to-cart"> Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm col-3 p-0">
+                                <img class="product-img" alt="Album 3 Picture" src="./images/album1.webp">
+                            </div>
+                            <div class="col-sm col-3 p-0 product-name">Album #3</div>
+                            <div class="col-sm-2 col-2 p-0 product-price">£15</div>
+                            <div class="col-sm col-4 p-0 ">
+                                <button type='button' id='button3' data-action="add-to-cart"> Add to cart</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm col-3 p-0">
-                            <img class="product-img" alt="Album 1 Picture" src="./images/album1.webp">
-                        </div>
-                        <div class="col-sm col-3 p-0 product-name ">Album #1</div>
-                        <div class="col-sm-2 col-2 p-0 product-price ">£15</div>
-                        <div class="col-sm col-4 p-0 ">
-                            <button type='button' id='button1' data-action="add-to-cart"> Add to cart</button>
+                    <div class="col-sm-5 col-1 d-none d-sm-block">
+                        Cart
+                        <div class="cart">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm col-3 p-0">
-                            <img class="product-img" alt="Album 2 Picture" src="./images/album1.webp">
+                    <div class="offcanvas offcanvas-start" id="demo">
+                        <div class="cart offcanvas-header">
+                            <h1 class="offcanvas-title">Cart</h1>
+                            <button title="Close Cart" aria-label = "Close Cart" type="button" class="btn-close text-reset"
+                                data-bs-dismiss="offcanvas"></button>
                         </div>
-                        <div class="col-sm col-3 p-0 product-name">Album #2</div>
-                        <div class="col-sm-2 col-2 p-0 product-price">£15</div>
-                        <div class="col-sm col-4  p-0 ">
-                            <button type='button' id='button2' data-action="add-to-cart"> Add to cart</button>
+                        <div class="offcanvas-body">
+                            <div class="offcanvas-cart row mt-2 mb-3 p-2 animated flipInX border"></div>
+                            <div class="d-flex flex-row shadow-sm offcanvas-footer mt-2 mb-3 animated flipInX border"></div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm col-3 p-0">
-                            <img class="product-img" alt="Album 3 Picture" src="./images/album1.webp">
-                        </div>
-                        <div class="col-sm col-3 p-0 product-name">Album #3</div>
-                        <div class="col-sm-2 col-2 p-0 product-price">£15</div>
-                        <div class="col-sm col-4 p-0 ">
-                            <button type='button' id='button3' data-action="add-to-cart"> Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-1 d-none d-sm-block">
-                    Cart
-                    <div class="cart">
-                    </div>
-                </div>
-                <div class="offcanvas offcanvas-start" id="demo">
-                    <div class="cart offcanvas-header">
-                        <h1 class="offcanvas-title">Cart</h1>
-                        <button title="Close Cart" type="button" class="btn-close text-reset"
-                            data-bs-dismiss="offcanvas"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div class="offcanvas-cart row mt-2 mb-3 p-2 animated flipInX border"></div>
-                        <div class="d-flex flex-row shadow-sm offcanvas-footer mt-2 mb-3 animated flipInX border"></div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     </div>
     <div class="p-4 bg-dark text-center">
         <p class="bg-dark">&copy; 2023 | Sam's Music Ltd, all rights reserved.</p>
