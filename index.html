@@ -12,19 +12,25 @@
 
 <body>
     <div>
-        <a class ="visually-hidden-focusable" href="#main">Skip to main content</a>
+        <!-- Skip link to main content of the page to increase accessibility -->
+        <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
         <div class="row">
             <div class="col-sm">
+                <!-- Nav Bar using bootstrap navbar-->
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <div class="container-fluid">
+                        <!-- Website logo on ever page using img tag including alt attribute to increase accessibility-->
                         <img id="nav-logo" src="images/Logo.png" alt="Sam's Music Logo">
-                        <button title="Navbar Button" class="navbar-toggler" type="button" aria-label = "Open Navbar Button" data-bs-toggle="collapse"
-                            data-bs-target="#collapsibleNavbar">
+                        <!-- Button to open navbar menu on extra small devices to improve responsiveness, button has aria-label attribute so it can be read by screen readers-->
+                        <button title="Navbar Button" class="navbar-toggler" aria-label="Open Navbar Button"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        <!-- List of all buttons in navbar so it can be in the collapse when need or in the navbar -->
                         <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <!-- Using form instead of a element to improve functionality and to follow coding standards-->
                                     <form class="nav-link" action="index.html"><button type="submit">Home</button>
                                     </form>
                                 </li>
@@ -45,115 +51,132 @@
                 </nav>
             </div>
         </div>
-    </div>
-    <main id="main">
-        <div>
-            <div class="row">
-                <h1 class="col title">Welcome to Sam's Music Store</h1>
-            </div>
-            <div class="row">
-                <div class="col-0 col-sm-1 col-md-2 col-lg-3 col-xxl-4"></div>
-                <div class="col m-5 p-3 bg-primary text-white rounded">
-                    <span class="bg-primary center discount1"> Current Discount</span>
-                    <span class="bg-primary center discount2"> 20% off all products</span>
+        <!-- main element used to show this is the main content of the page and to link to skip content button -->
+        <main id="main">
+            <div>
+                <div class="row">
+                    <h1 class="col title">Welcome to Sam's Music Store</h1>
                 </div>
-                <div class="col-0 col-sm-1 col-md-2 col-lg-3 col-xxl-3"></div>
-            </div>
-            <div id="homeCarousel" class="carousel slide d-block d-lg-none" data-bs-ride="carousel">
-                <div class="carousel-indicators center">
-                    <button type="button" title="Carousel Indicator 1" aria-label = "Carousel Indicator 1" 
-                        data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" title="Carousel Indicator 2" aria-label = "Carousel Indicator 2" 
-                        data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" title="Carousel Indicator 3" aria-label = "Carousel Indicator 3" 
-                        data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+                <div class="row">
+                    <div class="col-0 col-sm-1 col-md-2 col-lg-3 col-xxl-4"></div>
+                    <div class="col m-5 p-3 bg-primary text-white rounded">
+                        <span class="bg-primary center discount1"> Current Discount</span>
+                        <span class="bg-primary center discount2"> 20% off all products</span>
+                    </div>
+                    <div class="col-0 col-sm-1 col-md-2 col-lg-3 col-xxl-3"></div>
                 </div>
-                <div class="carousel-inner">
-                    <a class="hyper" href="shop.html">
-                    <div class="carousel-item active">
-                            <img src="images/Album6.png" alt="Album 6 Picture" class="d-block w-30 center" style="width:33%">
-                            <span class="h3 center"> New Release</span>
-                            <p class="center"> Album #6</p>
-                            <br>
+                <!-- Bootstrap carousel to showcase new releases in the shop -->
+                <div id="homeCarousel" class="carousel slide d-block d-lg-none" data-bs-ride="carousel">
+                    <div class="carousel-indicators center">
+                        <!-- Buttons have aria-label so they can be read by screen readers as they have no inner text -->
+                        <button type="button" title="Carousel Indicator 1" aria-label="Carousel Indicator 1"
+                            data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" title="Carousel Indicator 2" aria-label="Carousel Indicator 2"
+                            data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" title="Carousel Indicator 3" aria-label="Carousel Indicator 3"
+                            data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
                     </div>
-                    <div class="carousel-item">
-                            <img src="images/Album5.png" alt="Album 5 Picture" class="d-block w-30 center" style="width:33%">
-                            <span class="h3 center"> New Release</span>
-                            <p class="center"> Album #5</p>
-                            <br>
-                    </div>
-                    <div class="carousel-item">
-                            <img src="images/Album5.png" alt="Album 4 Picture" class="d-block w-30 center" style="width:33%">
-                            <span class="h3 center"> New Release</span>
-                            <p class="center"> Album #4</p>
-                            <br>
-                    </div>
-                    </a>
-                    <button title="Carousel Previous Button" aria-label = "Carousel Previous Button" 
-                        class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button title="Carousel Next Button" aria-label = "Carousel Next Button" 
-                        class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-            <div class = "d-none d-lg-block">
-                <a class="hyper" href="shop.html"></a>
-                    <div class="row">
-                        <div class="col-lg-4">
-                                <img src="images/Album6.png" alt="Album 6 Picture" class="d-block w-30 center" style="width:75%">
+                    <div class="carousel-inner">
+                        <a class="hyper" href="shop.html">
+                            <!-- Carousel items, each with an image with an alt attribute to describe the image -->
+                            <div class="carousel-item active">
+                                <img src="images/Album6.png" alt="Album 6 Picture" class="d-block w-30 center"
+                                    style="width:33%">
                                 <span class="h3 center"> New Release</span>
                                 <p class="center"> Album #6</p>
-                        </div>
-                        <div class="col-lg-4">
-                                <img src="images/Album5.png" alt="Album 5 Picture" class="d-block w-30 center p-10" style="width:75%">
+                                <br>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Album5.png" alt="Album 5 Picture" class="d-block w-30 center"
+                                    style="width:33%">
                                 <span class="h3 center"> New Release</span>
                                 <p class="center"> Album #5</p>
-                        </div>
-                        <div class="col-lg-4">
-                                <img src="images/Album4.png" alt="Album 4 Picture" class="d-block w-30 center p-10" style="width:75%">
+                                <br>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Album5.png" alt="Album 4 Picture" class="d-block w-30 center"
+                                    style="width:33%">
                                 <span class="h3 center"> New Release</span>
                                 <p class="center"> Album #4</p>
+                                <br>
+                            </div>
+                        </a>
+                        <!-- Carousel control buttons with aria-label attribute so they can be read by screen readers as they have no inner text -->
+                        <button title="Carousel Previous Button" aria-label="Carousel Previous Button"
+                            class="carousel-control-prev" type="button" data-bs-target="#homeCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button title="Carousel Next Button" aria-label="Carousel Next Button"
+                            class="carousel-control-next" type="button" data-bs-target="#homeCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Alternative to carousel used for larger device, controlled by class d-none to hide and d-lg-block to show content -->
+                <div class="d-none d-lg-block">
+                    <a class="hyper" href="shop.html"></a>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="images/Album6.png" alt="Album 6 Picture" class="d-block w-30 center"
+                                style="width:75%">
+                            <span class="h3 center"> New Release</span>
+                            <p class="center"> Album #6</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="images/Album5.png" alt="Album 5 Picture" class="d-block w-30 center p-10"
+                                style="width:75%">
+                            <span class="h3 center"> New Release</span>
+                            <p class="center"> Album #5</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="images/Album4.png" alt="Album 4 Picture" class="d-block w-30 center p-10"
+                                style="width:75%">
+                            <span class="h3 center"> New Release</span>
+                            <p class="center"> Album #4</p>
                         </div>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <span class="center title">Upcoming Events</span>
-            <div class="cards row p-1">
-                <div class="col-lg-3 col-sm-6 p-0 card">
-                    <div class="card-header light"><span class="center light">Next Concert</span> </div>
-                    <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/concert.jpeg"
-                            alt="Picture of a crowd at a concert with orange lights"></div>
-                    <div class="card-footer light"><span class="center light">15/3/2023</span></div>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-0 card">
-                    <div class="card-header light"><span class="center light">Next Song</span></div>
-                    <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/nextalbum.jpeg"
-                            alt="Logo of the song"></div>
-                    <div class="card-footer light"><span class="center light">20/5/2023</span></div>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-0 card">
-                    <div class="card-header light"><span class="center light">Next Tour</span></div>
-                    <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/tour.jpeg"
-                            alt="Picture of a crowd at a concert with blue lights"></div>
-                    <div class="card-footer light"><span class="center light">7/8/2023</span></div>
-                </div>
-                <div class="col-lg-3 col-sm-6 p-0 card">
-                    <div class="card-header light"><span class="center light">Next Album</span></div>
-                    <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/album1.webp"
-                            alt="Picture of the next album"></div>
-                    <div class="card-footer light"><span class="center light">7/8/2023</span></div>
+                    </a>
                 </div>
             </div>
+            <!-- Upcoming Events section to showcase future events of the company-->
+            <div class="container-fluid">
+                <span class="center title">Upcoming Events</span>
+                <div class="cards row p-1">
+                    <!-- Bootstrap card elements for each event -->
+                    <div class="col-lg-3 col-sm-6 p-0 card">
+                        <!-- Images have detailted alt attribute to imrpove accessibility-->
+                        <div class="card-header light"><span class="center light">Next Concert</span> </div>
+                        <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/concert.jpeg"
+                                alt="Picture of a crowd at a concert with orange lights"></div>
+                        <div class="card-footer light"><span class="center light">15/3/2023</span></div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 p-0 card">
+                        <div class="card-header light"><span class="center light">Next Song</span></div>
+                        <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/nextalbum.jpeg"
+                                alt="Logo of the song"></div>
+                        <div class="card-footer light"><span class="center light">20/5/2023</span></div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 p-0 card">
+                        <div class="card-header light"><span class="center light">Next Tour</span></div>
+                        <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/tour.jpeg"
+                                alt="Picture of a crowd at a concert with blue lights"></div>
+                        <div class="card-footer light"><span class="center light">7/8/2023</span></div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 p-0 card">
+                        <div class="card-header light"><span class="center light">Next Album</span></div>
+                        <div class="card-body"><img class="img-fluid mx-auto d-block" src="images/album1.webp"
+                                alt="Picture of the next album"></div>
+                        <div class="card-footer light"><span class="center light">7/8/2023</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <div class="p-4 bg-dark text-center">
+            <p class="bg-dark">&copy; 2023 | Sam's Music Ltd, all rights reserved.</p>
         </div>
-    </main>
-    <div class="p-4 bg-dark text-center">
-        <p class="bg-dark">&copy; 2023 | Sam's Music Ltd, all rights reserved.</p>
-    </div>
 </body>
 
 </html>

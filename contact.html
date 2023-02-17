@@ -12,19 +12,25 @@
 
 <body>
     <div>
-        <a class ="visually-hidden-focusable" href="#main">Skip to main content</a>
+        <!-- Skip link to main content of the page to increase accessibility -->
+        <a class="visually-hidden-focusable" href="#main">Skip to main content</a>
         <div class="row">
             <div class="col-sm">
+                <!-- Nav Bar using bootstrap navbar-->
                 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                     <div class="container-fluid">
-                        <img id="nav-logo" src="images/Logo.png" alt="Sam's Music Logl">
-                        <button title="Navbar Button" class="navbar-toggler" aria-label = "Open Navbar Button" 
+                        <!-- Website logo on ever page using img tag including alt attribute to increase accessibility-->
+                        <img id="nav-logo" src="images/Logo.png" alt="Sam's Music Logo">
+                        <!-- Button to open navbar menu on extra small devices to improve responsiveness, button has aria-label attribute so it can be read by screen readers-->
+                        <button title="Navbar Button" class="navbar-toggler" aria-label="Open Navbar Button"
                             type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        <!-- List of all buttons in navbar so it can be in the collapse when need or in the navbar -->
                         <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <!-- Using form instead of a element to improve functionality and to follow coding standards-->
                                     <form class="nav-link" action="index.html"><button type="submit">Home</button>
                                     </form>
                                 </li>
@@ -45,11 +51,14 @@
                 </nav>
             </div>
         </div>
+        <!-- main element used to show this is the main content of the page and to link to skip content button -->
         <main id="main">
             <div class="row">
                 <div class="col">
+                    <!-- Contact Form -->
                     <div id="contactform">
                         <h1 class="text-center"> Contact Us</h1>
+                        <!-- Each input is required to have form validation-->
                         <form action="contact.php" class="was-validated">
                             <div class="row">
                                 <div class="col-lg">
@@ -68,12 +77,14 @@
                             <input type="submit" value="Submit">
                         </form>
                     </div>
-                    <p class="text-center">Email: <a class="link-info" href="mailto:contact@samsmusic.com">contact@samsmusic.com</a></p>
+                    <p class="text-center">Email: <a class="link-info"
+                            href="mailto:contact@samsmusic.com">contact@samsmusic.com</a></p>
                     <p class="text-center">Phone: 07123 456789</p>
                 </div>
             </div>
         </main>
     </div>
+    <!-- Footer -->
     <div class="p-4 bg-dark text-center">
         <p class="bg-dark">&copy; 2023 | Sam's Music Ltd, all rights reserved.</p>
     </div>
